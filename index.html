@@ -12,7 +12,7 @@ var raster = new Raster('image');
 raster.visible = false;
 
 // The size of our grid cells:
-var gridSize = 10;
+var gridSize = 50;
 
 // Space the cells by 120%:
 var spacing = 1;
@@ -33,7 +33,7 @@ raster.on('load', function() {
 			// Get the color of the pixel:
 			var color = raster.getPixel(x, y);
 
-      var rectangle = new Rectangle(new Point(x, y) * gridSize, new Size(5, 5));
+      var rectangle = new Rectangle(x, y, 50, 50);
       var path = new Path.Rectangle(rectangle);
 
 			// Set the fill color of the path to the color
